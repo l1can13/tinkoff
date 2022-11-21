@@ -2,40 +2,40 @@ import 'normalize.css';
 import './index.less';
 
 function getDivs() {
-    let arr = [];
-    for (let i = 1; i < 7; ++i) {
-        arr.push(document.querySelector(('.items_div' + i)));
-    }
+  let arr = [];
+  for (let i = 1; i < 7; ++i) {
+    arr.push(document.querySelector('.items_div' + i));
+  }
 
-    return arr;
+  return arr;
 }
 
 function getUls() {
-    let arr = [];
-    for (let i = 1; i < 7; ++i) {
-        arr.push(document.querySelector(('.section_hidden_list' + i)));
-    }
+  let arr = [];
+  for (let i = 1; i < 7; ++i) {
+    arr.push(document.querySelector('.section_hidden_list' + i));
+  }
 
-    return arr;
+  return arr;
 }
 
 function getButtons() {
-    let arr = [];
-    for (let i = 1; i < 7; ++i) {
-        arr.push(document.querySelector(('.open_menu' + i)))
-    }
+  let arr = [];
+  for (let i = 1; i < 7; ++i) {
+    arr.push(document.querySelector('.open_menu' + i));
+  }
 
-    return arr;
+  return arr;
 }
 
 function setListeners(divs, uls, buttons) {
-    for (let i = 0; i < 6; ++i) {
-        console.log(divs[i]);
-        divs[i].addEventListener('click', () => {
-            buttons[i].classList.toggle('open');
-            uls[i].classList.toggle('open');
-        });
-    }
+  for (let i = 0; i < 6; ++i) {
+    console.log(divs[i]);
+    divs[i].addEventListener('click', () => {
+      buttons[i].classList.toggle('open');
+      uls[i].classList.toggle('open');
+    });
+  }
 }
 
 let divs = getDivs();
